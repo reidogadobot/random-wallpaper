@@ -10,7 +10,7 @@ function random() {
 
 app.get("/wallpaper", (req, res) => {
    res.type("json")
-   res.send({result: random()})
+   res.send(JSON.stringify({result: random()}))
 })
 
 app.listen(PORT, () => {
